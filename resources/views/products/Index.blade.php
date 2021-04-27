@@ -7,7 +7,7 @@
                 <h2>Laravel 8 CRUD Example </h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-success" href="{{route('products.create')}}" title="Create a product"> <i class="fas fa-plus-circle"></i>
+                <a class="btn btn-success" href="{{route('products.get.new')}}" title="Create a product"> <i class="fas fa-plus-circle"></i>
                 </a>
             </div>
         </div>
@@ -36,18 +36,17 @@
                 <td>{{$product->price}}</td>
                 <td>{{$product->created_at}}</td>
                 <td>
-                    <form action="{{route('products.destroy',['product'=>$product->id])}}" method="POST">
+                    <form action="{{route('products.post.delete',['product'=>$product->id])}}" method="POST">
 
-                        <a href="{{route('products.show',['product'=>$product->id])}}" title="show">
+                        <a href="{{route('products.get.show',['product'=>$product->id])}}" title="show">
                             <i class="fas fa-eye text-success  fa-lg"></i>
                         </a>
 
-                        <a href="{{route('products.edit',['product'=>$product->id])}}">
+                        <a href="{{route('products.get.edit',['product'=>$product->id])}}">
                             <i class="fas fa-edit  fa-lg"></i>
                         </a>
 
                         @csrf
-                        @method('DELETE')
 
                         <button type="submit" title="delete" style="border: none; background-color:transparent;">
                             <i class="fas fa-trash fa-lg text-danger"></i>

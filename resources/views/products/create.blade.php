@@ -7,7 +7,7 @@
             <h2>Add New Product</h2>
         </div>
         <div class="pull-right">
-            <a class="btn btn-primary" href="{{route('products.index')}}" title="Go back"> <i class="fas fa-backward "></i> </a>
+            <a class="btn btn-primary" href="{{route('products.get.view')}}" title="Go back"> <i class="fas fa-backward "></i> </a>
         </div>
     </div>
 </div>
@@ -22,7 +22,7 @@
     </ul>
 </div>
 @endif
-<form action="{{route('products.store')}}" method="POST" >
+<form action="{{route('products.post.insert')}}" method="POST" >
     @csrf
 
     <div class="row">

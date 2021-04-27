@@ -7,7 +7,7 @@
                 <h2>Edit Product</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-primary" href="{{route('products.index')}}" title="Go back"> <i class="fas fa-backward "></i> </a>
+                <a class="btn btn-primary" href="{{route('products.get.view')}}" title="Go back"> <i class="fas fa-backward "></i> </a>
             </div>
         </div>
     </div>
@@ -23,10 +23,8 @@
         </div>
     @endif
 
-    <form action="{{route('products.update',['product'=>$product->id])}}" method="POST">
+    <form action="{{route('products.post.update',['product'=>$product->id])}}" method="POST">
         @csrf
-        @method('PUT')
-
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">

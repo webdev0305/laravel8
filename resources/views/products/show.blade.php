@@ -8,7 +8,7 @@
                 <h2> Product Show </h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-primary" href="{{route('products.index')}}" title="Go back"> <i class="fas fa-backward "></i> </a>
+                <a class="btn btn-primary" href="{{route('products.get.view')}}" title="Go back"> <i class="fas fa-backward "></i> </a>
             </div>
         </div>
     </div>
